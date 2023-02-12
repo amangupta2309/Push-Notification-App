@@ -3,16 +3,12 @@ import "firebase/auth";
 import "firebase/storage";
 import "firebase/database";
 
-const app = firebase.initializeApp({
-  apiKey: process.env.REACT_APP_APIKEY,
-  databaseURL: process.env.REACT_APP_DATABASEURL,
-  authDomain: process.env.REACT_APP_AUTHDOMAIN,
-  projectId: process.env.REACT_APP_PROJECTID,
-  storageBucket: process.env.REACT_APP_STORAGEBUCKET,
-  messagingSenderId: process.env.REACT_APP_MESSAGINGSENDERID,
-  appId: process.env.REACT_APP_APPID,
-  measurementId: process.env.REACT_APP_MEASUREMENTID,
-});
+const dotenv = require('dotenv');
+dotenv.config({path: path.join(__dirname, '../.env')});
+// // console.log((process.env))
+const serviceAccount = require(process.env.PRIVATE_SERVICE_KEY)
+
+const app = firebase.initializeApp({serviceAccount});
 
 const auth = app.auth();
 const storage = app.storage();
