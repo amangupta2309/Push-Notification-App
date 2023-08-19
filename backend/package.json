@@ -8,6 +8,7 @@
   },
   "scripts": {
     "start": "node index",
+    "build": "node index",
     "dev": "nodemon index"
   },
   "author": "",
