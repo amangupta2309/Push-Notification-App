@@ -22,7 +22,7 @@ export default function NavigationBar() {
   }
   return (
     <>
-      <Navbar style={{ backgroundColor: "#160469" }}>
+      <Navbar style={{ backgroundColor: "#160469", padding: '0.5rem 1rem'}}>
         <Navbar.Brand href="#" style={{ color: "#9d96ff" }}>
           Notiify
         </Navbar.Brand>
